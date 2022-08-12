@@ -48,17 +48,15 @@ function displayResults(weather) {
     hilow.style.fontWeight = 'bold';
 }
 
-function dateBuilder(d) { // formatiranje datuma po odredjenom formatu
-    // konkretno u ovom slucaju u formatu  "4.11.2021" tipa (povratne vrednost su brojevi iz svih
-    //dole koriscenih metoda za uzimanje podataka i baratanje sa datumima)
+function dateBuilder(d) { 
     let months = ["January", "February", "March", "April", "May", "June", "July", "August",
      "September",  "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     
-    let day = days[d.getDay()]; // vraca BROJ, odnosno INDEX dana
-    let date = d.getDate();    // vraca BROJ, odnosno dan, tj datum tipa 23.( koji je dan u mesecu)
-    let month = months[d.getMonth()]; // vraca BROJ od 1-12(12 meseci u godini)
-    let year = d.getFullYear(); // vraca trenutnu godinu(2021/2022 itd)
+    let day = days[d.getDay()]; 
+    let date = d.getDate();   
+    let month = months[d.getMonth()]; 
+    let year = d.getFullYear(); 
     
     return `${day}, ${date}, ${month}, ${year}`;
 }
