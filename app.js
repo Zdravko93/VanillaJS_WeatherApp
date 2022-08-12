@@ -10,8 +10,8 @@ function setQuery() {
     getData(searchValue);
 }
 
-function getData(query) { // preuzimanje podataka sa servera i pretvaranje u JSON format
-    // prikaz podataka preko funkcije displayResults()
+function getData(query) { 
+    
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`)
         .then(weather => {
             return weather.json();
